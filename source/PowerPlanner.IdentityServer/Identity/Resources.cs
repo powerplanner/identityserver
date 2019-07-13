@@ -32,7 +32,10 @@ namespace IdentityServer.Identity
                     ApiSecrets = new List<Secret> {new Secret("testApiSecret".Sha256())},
                     Scopes = new List<Scope> {
                         new Scope(Scopes.ParentsRead),
-                        new Scope(Scopes.ParentsWrite)
+                        new Scope(Scopes.ParentsWrite),
+                        new Scope(Scopes.AccountRead),
+                        new Scope(Scopes.AccountWrite),
+                        new Scope(Scopes.FullApp)
                     }
                 }
             };
