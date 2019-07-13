@@ -40,6 +40,20 @@ namespace IdentityServer.Identity
 
                 new Client()
                 {
+                    ClientId = "PowerPlannerUWP",
+                    ClientName = "Power Planner UWP app",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AllowOfflineAccess = true, // Offline access needed to receive refresh token
+                    AllowedScopes = new string[]
+                    {
+                        Scopes.FullApp
+                    },
+                    RequireClientSecret = false,
+                    RequireConsent = false
+                },
+
+                new Client()
+                {
                     ClientId = "LegacyServerClient",
                     ClientName = "Legacy server client",
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
